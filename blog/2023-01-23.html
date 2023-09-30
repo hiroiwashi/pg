@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html lang="" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>部活が終わった今思うこと</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/pagetoc.css">
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">HOME</a></li><li class="chapter-item expanded "><div>My BLOG</div></li><li class="chapter-item expanded "><a href="../blog/2023-03-07.html">ChatGPTを用いてFastAPIの勉強をした話</a></li><li class="chapter-item expanded "><div>４年間のツケの清算</div></li><li class="chapter-item expanded "><div>絶対的な何か</div></li><li class="chapter-item expanded "><a href="../blog/2023-02-02.html">自作のpreprocessorを使えるようにした</a></li><li class="chapter-item expanded "><a href="../blog/2023-01-23.html" class="active">部活が終わった今思うこと</a></li><li class="chapter-item expanded "><div>最近考えること</div></li><li class="chapter-item expanded "><div>ガチ恋上等</div></li><li class="chapter-item expanded "><div>My MEMO</div></li><li class="chapter-item expanded "><a href="../memo/2023-09-30.html"></a></li><li class="chapter-item expanded "><a href="../memo/2023-01-16.html">イギリス旅行用（ロック）</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/hiroiwashi/pages" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-file"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main><div class="sidetoc"><nav class="pagetoc"></nav></div>
+                        <h1 id="部活が終わった今思うこと"><a class="header" href="#部活が終わった今思うこと">部活が終わった今思うこと</a></h1>
+<p>先日４年生を送る会なるものが行われ、僕の４年間の部活生活は完全に終わった。前に書いたときはシーズン中でしっかり振り返りきれてないような気もするから、一応今の自分の考えを少し残しておこう。</p>
+<p>競技自体も好きだし周りの人も当たり前に大学でラグビーを続けてたから、大学でラグビーで関わらないという選択肢はなかった。ただ、併願校的にも第一志望受からなかったら選手を続けるのは無理そうと思ってたから（実際にスタッフ希望のメールも送っていた。今思えば続ける勇気がなかっただけなんだけど。）、受かった時にこれでラグビーできるなと嬉しかったのは今でも覚えてる。合格発表の日にはラグビー部の人を見つけて話しかけに行ったし、入学式の前に入部届を出して入部した。ラグビーをすることが当たり前だったし入部することに何の悩みもなかったから、今振り返っても自分がした選択に対して何も思うことはない。今１年生になっても絶対ラグビー部を選ぶし、というか選ばざるを得ないというか。</p>
+<p>この４年間、ラグビー出来るってだけで僕は満足だった。きつかったり辛いことは山ほどあったけど、少しやる気がなくなってしまったことはあったけど、一度もラグビーを辞めたいとは思うことはなかった。部活を続ける理由については４年間でよく議論されていて、勝つためとか人が好きだからとかあげようと思えば幾つでもあげられるけど、結局はラグビーが好きっていうのが根本にあったし一番大きな理由だった。やればやるほどラグビーの奥深さに触れることができたし、知ろうとすればするほど新たな顔を見ることができた。10 年以上やってきたけど新たな発見ばかりで飽きることがなかった。ラグビーは最高なスポーツだと確信している。</p>
+<p>やっぱり僕はラグビーが好きだし、僕にはラグビーしかないんだな。後輩とかコーチで教えた子供たちとか、他の人たちがラグビーの魅力を知ってラグビーを好きになっていく姿を見ると、本当に嬉しいし幸せに思う。これから先ラグビーに出会う人たちに何を一番伝えたいかって考えると、もちろん部活とかで真剣にやるんだったら最後まで続けてほしいっていうのはあるんだけど、とにかくみんなにはラグビーを好きになって欲しい。好きになるまでは時間がかかるかもしれない。あんなにも辛くてきついスポーツはないのだから。だけどいつか好きになってくれたら、少しでも楽しいと思ってくれたら、ラグビーの先輩としてこれ以上幸せなことはない。</p>
+<p>松任谷由実は歌う。</p>
+<blockquote>
+<p>GLORIA GLORIA<br />遥かな勝利<br />どれだけ自分を痛めればとどく<br />答えを知らず　ただ走り抜け<br />少年は戦士になる</p>
+</blockquote>
+<p>みんなには戦士になってほしい。</p>
+<p>戦士になりきれなかった男の小さくて大きな願いです。</p>
+<div class="datetime" style="text-align: center; color: gray; font-style: italic; font-size: 90%;">Monday 23 January 2023</div>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../blog/2023-02-02.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../memo/2023-09-30.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../blog/2023-02-02.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../memo/2023-09-30.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="../theme/pagetoc.js"></script>
+
+
+    </body>
+</html>

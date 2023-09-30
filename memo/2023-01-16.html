@@ -1,0 +1,335 @@
+<!DOCTYPE HTML>
+<html lang="" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>イギリス旅行用（ロック）</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/pagetoc.css">
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">HOME</a></li><li class="chapter-item expanded "><div>My BLOG</div></li><li class="chapter-item expanded "><a href="../blog/2023-03-07.html">ChatGPTを用いてFastAPIの勉強をした話</a></li><li class="chapter-item expanded "><div>４年間のツケの清算</div></li><li class="chapter-item expanded "><div>絶対的な何か</div></li><li class="chapter-item expanded "><a href="../blog/2023-02-02.html">自作のpreprocessorを使えるようにした</a></li><li class="chapter-item expanded "><a href="../blog/2023-01-23.html">部活が終わった今思うこと</a></li><li class="chapter-item expanded "><div>最近考えること</div></li><li class="chapter-item expanded "><div>ガチ恋上等</div></li><li class="chapter-item expanded "><div>My MEMO</div></li><li class="chapter-item expanded "><a href="../memo/2023-09-30.html"></a></li><li class="chapter-item expanded "><a href="../memo/2023-01-16.html" class="active">イギリス旅行用（ロック）</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/hiroiwashi/pages" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-file"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main><div class="sidetoc"><nav class="pagetoc"></nav></div>
+                        <div class="topic"><i class="fa fa-tag"></i><span>イギリス旅行</span></div>
+<h1 id="イギリス旅行用"><a class="header" href="#イギリス旅行用">イギリス旅行用</a></h1>
+<h2 id="イートンの時行った場所の確認"><a class="header" href="#イートンの時行った場所の確認">イートンの時行った場所の確認</a></h2>
+<ul>
+<li>ロンドン
+<ul>
+<li>大英博物館</li>
+<li>自然博物館</li>
+<li>ロンドンアイ</li>
+<li>ミュージカル</li>
+<li>ショッピングモール</li>
+<li>バッキンガム宮殿</li>
+</ul>
+</li>
+<li>ロンドン以外（？）
+<ul>
+<li>ストーンヘンジ</li>
+<li>イートン</li>
+<li>ウィンザー</li>
+<li>ハンプトンコート</li>
+<li>オクスフォード</li>
+<li>ソールズベリー</li>
+<li>コッツウォルズ</li>
+<li>サイオンハウス</li>
+</ul>
+</li>
+</ul>
+<h2 id="候補地"><a class="header" href="#候補地">候補地</a></h2>
+<ul>
+<li>ブライトン
+<ul>
+<li>Brighton Community Stadium</li>
+<li>他はなさそう？？？</li>
+</ul>
+</li>
+<li>リバプール
+<ul>
+<li><a href="https://www.strawberryfieldliverpool.com/">Strawberry Field</a></li>
+<li>Penny Lane</li>
+<li><a href="https://www.beatlesstory.com/">The Beatles Story</a></li>
+</ul>
+</li>
+<li>ラグビー
+<ul>
+<li><a href="https://www.tripadvisor.jp/Attraction_Review-g504202-d8742509-Reviews-The_Webb_Ellis_Rugby_Football_Museum-Rugby_Warwickshire_England.html">The Webb Ellis Rugby Football Museum</a></li>
+<li>銅像</li>
+</ul>
+</li>
+<li>ロンドン市内
+<ul>
+<li><a href="https://www.visitlondon.com/things-to-do/london-areas/soho">Soho</a>
+<ul>
+<li>supremeもpalaceもここの中にありそう。僕が買いたいものは揃いそう？？</li>
+<li>ホテルから歩いて１０分だから余裕</li>
+<li>治安がいいのか悪いのかよーわからん場所</li>
+</ul>
+</li>
+<li>New bond st.
+<ul>
+<li><del>リュック</del></li>
+<li>コインケース</li>
+<li>日本で買うのと変わらない可能性が高い。日本であんま見ないブランドを探す</li>
+</ul>
+</li>
+<li><del>ミュージカル見るかどうか、見るなら<strong>wicked</strong></del> ←時間なさそうなので諦め</li>
+<li>ストリートアート系
+<ul>
+<li>Camden Market</li>
+<li>Brick Lane</li>
+</ul>
+</li>
+<li>グリニッジ天文台</li>
+</ul>
+</li>
+</ul>
+<h2 id="予定"><a class="header" href="#予定">予定</a></h2>
+<h3 id="1st-day-224"><a class="header" href="#1st-day-224">1st day (2/24)</a></h3>
+<blockquote>
+<p>5:00 ヒースロー着</p>
+<p>6:07 Heathrow Terminals 2 &amp; 3 (Anytime Day Single)</p>
+<p>06:50 Tottenham Court Road</p>
+</blockquote>
+<p>ロンドン到着次第観光</p>
+<p>Soho</p>
+<blockquote>
+<p>Palace</p>
+<p>Supreme</p>
+</blockquote>
+<p>Camden Market</p>
+<blockquote>
+<p>古着</p>
+</blockquote>
+<p>Brick Lane</p>
+<blockquote>
+<p>古着</p>
+</blockquote>
+<p>New bond st.</p>
+<blockquote>
+<p>コインケース</p>
+</blockquote>
+<p>Greenwich</p>
+<h3 id="2nd-day-225"><a class="header" href="#2nd-day-225">2nd day (2/25)</a></h3>
+<blockquote>
+<p>12:00 ロンドン発</p>
+<p>21:00 カーディフ発</p>
+<p>23:00 ロンドン着</p>
+</blockquote>
+<h3 id="3rd-day-226"><a class="header" href="#3rd-day-226">3rd day (2/26)</a></h3>
+<p>バースに行く？？？</p>
+<h3 id="4th-day-227"><a class="header" href="#4th-day-227">4th day (2/27)</a></h3>
+<p><strong>朝ラグビー</strong></p>
+<blockquote>
+<p>7:46 London Euston</p>
+<p>8:42 Rugby</p>
+<p>10:42 Rugby</p>
+</blockquote>
+<p><strong>昼食からリバプール</strong></p>
+<blockquote>
+<p>13:04 Liverpool Lime Street</p>
+<p>16:43 Liverpool Lime Street</p>
+<p>19:03 London Euston</p>
+</blockquote>
+<p><del>リバプール</del></p>
+<p><del><em>ラグビーも同日に行ける？</em></del></p>
+<h3 id="5th-day-228"><a class="header" href="#5th-day-228">5th day (2/28)</a></h3>
+<p>ラグビー巡り</p>
+<blockquote>
+<p>Leicester</p>
+<p>Saracens</p>
+<p>Harlequins</p>
+<p>Twickenham</p>
+<p>World Rugby Museum</p>
+</blockquote>
+<h3 id="6th-day-31"><a class="header" href="#6th-day-31">6th day (3/1)</a></h3>
+<p>フライト前に~~グリニッジ~~とブライトンに行ける気がする</p>
+<p>ホテル-グリニッジが0.7h程度</p>
+<p>ホテル-ブライトンが1.5h程度</p>
+<p>ブライトン-グリニッジが2h程度</p>
+<p>ホテル-ヒースローが0.75h程度</p>
+<p>15:00 ヒースロー到着？？？</p>
+<p>17:00 ヒースロー発</p>
+<div class="datetime" style="text-align: center; color: gray; font-style: italic; font-size: 90%;">Monday 16 January 2023</div>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../memo/2023-09-30.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../memo/2023-09-30.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+        <script src="../theme/pagetoc.js"></script>
+
+
+    </body>
+</html>
